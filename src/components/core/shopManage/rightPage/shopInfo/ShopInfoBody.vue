@@ -6,7 +6,7 @@
         <li class="ul_li_dub"><span>公司名称:</span><b style="display: inline-block; width: 200px">{{company.companyName}}</b><span>公司性质:</span><input v-model="company.adCompanyNature" type="text"/></li>
         <li class="ul_li_one"><span>公司网址:</span><input v-model="company.adCompanyUrl" type="text"/></li>
         <li class="ul_li_one"><span>公司所在地:</span><input  v-model="company.adCompanyAddress" type="text"/></li>
-        <li class="ul_li_one"><span>固定电话:</span><input @blur="check_companyPhone" v-model="company.adCompanyPhone" type="text"/></li>
+        <li class="ul_li_one"><span>固定电话:</span><input placeholder="010-00000000" @blur="check_companyPhone" v-model="company.adCompanyPhone" type="text"/></li>
         <li class="ul_li_dub"><span>邮政编码:</span><input @blur="check_companyCode" v-model="company.adCompanyCode" type="text"/><span>电子邮箱:</span><input @blur="check_companyMail" v-model="company.adCompanyMail" type="text"/></li>
         <li class="ul_li_one"><span>联系人姓名:</span><input v-model="company.adCompanyContacts" type="text"/></li>
         <li class="ul_li_one"><span>联系人电话:</span><input  @blur="check_companyContacts" placeholder="建议提供销售联系人的电话" v-model="company.adCompanyContactsnumber" type="text"/></li>
@@ -16,14 +16,14 @@
         <li class="ul_li_one"><span>开户银行支行名称:</span><input v-model="company.adBankName" type="text"/></li>
         <li class="ul_li_one"><span>开户银行所在地:</span><input v-model="company.adBankAddress" type="text"/></li>
         <li class="content_table_p">店铺经营信息</li>
-        <li class="ul_li_dub"><span>卖家账号:</span><b style="display: inline-block; width: 200px">{{company.userName}}</b><span>店铺名称:</span><b v-if="this.company.adShopName !== null" style="display: inline-block; width: 200px">{{company.adShopName}}</b><input v-if="this.company.adShopName === null" v-model="company.adShopName"/></li>
+        <li class="ul_li_dub"><span>卖家账号:</span><b style="display: inline-block; width: 200px">{{company.userName}}</b><span>店铺名称:</span><b v-if="!this.inputFlag" style="display: inline-block; width: 200px">{{company.adShopName}}</b><input v-if="this.inputFlag" v-model="company.adShopName"/></li>
         <li class="ul_li_dub"><span>店铺负责人:</span><input v-model="company.adShopUsername" type="text"/><span>负责人手机号码:</span><input @blur="check_shopPhone" v-model="company.adShopPhone" type="text"/></li>
         <li class="ul_li_dub"><span>负责人QQ号码:</span><input v-model="company.adShopQq" type="text"/></li>
         <li class="content_table_p">证件信息</li>
         <li class="ul_li_ther"><span style="float: left">企业营业执照副本:</span>
           <el-upload
             class="avatar-uploader"
-            action="/api/uploadOss.do"
+            action="http://www.wutongsd.com/uploadOssCard.do"
             :show-file-list="false"
             :on-success="picSuccess1"
             :before-upload="picUploadbefore">
@@ -35,7 +35,7 @@
         <li class="ul_li_ther two"><span style="float: left">法人身份证:</span>
           <el-upload
             class="avatar-uploader"
-            action="/api/uploadOss.do"
+            action="http://www.wutongsd.com/uploadOssCard.do"
             :show-file-list="false"
             :on-success="picSuccess2"
             :before-upload="picUploadbefore">
@@ -46,7 +46,7 @@
         <li class="ul_li_ther two twos"><span style="float: left">店铺负责人身份证:</span>
           <el-upload
             class="avatar-uploader"
-            action="/api/uploadOss.do"
+            action="http://www.wutongsd.com/uploadOssCard.do"
             :show-file-list="false"
             :on-success="picSuccess3"
             :before-upload="picUploadbefore">
@@ -76,7 +76,7 @@
         <li class="ul_li_one"><span>开户银行支行名称:</span><span class="content_table_span">{{company.adBankName}}</span></li>
         <li class="ul_li_one"><span>开户银行所在地:</span><span class="content_table_span">{{company.adBankAddress}}</span></li>
         <li class="content_table_p">店铺经营信息</li>
-        <li class="ul_li_dub"><span>卖家账号:</span><span class="content_table_span">{{company.userName}}</span><span>店铺名称:</span><span class="content_table_span"></span></li>
+        <li class="ul_li_dub"><span>卖家账号:</span><span class="content_table_span">{{company.userName}}</span><span>店铺名称:</span><span class="content_table_span"><b style="display: inline-block; width: 200px">{{company.adShopName}}</b></span></li>
         <li class="ul_li_dub"><span>店铺负责人:</span><span class="content_table_span">{{company.adShopUsername}}</span><span>负责人手机号码:</span><span class="content_table_span">{{company.adShopPhone}}</span></li>
         <li class="ul_li_dub"><span>负责人QQ号码:</span><span class="content_table_span">{{company.adShopQq}}</span></li>
         <li class="content_table_p">证件信息</li>
@@ -123,11 +123,16 @@
           adLegalImg: '',
           adManageImg: ''
         },
+        inputFlag: false,
         adExId: ''
       }
     },
     methods: {
       editInfo () {
+        console.log(this.company.adShopName === null)
+        if (this.company.adShopName === '') {
+          this.inputFlag = true
+        }
         this.editFlag = true
       },
       selectInfo () {
@@ -279,6 +284,7 @@
                   type: 'success'
                 })
                 this.editFlag = false
+                this.inputFlag = false
                 this.selectInfo()
               } else {
                 this.$message.error(upShopState.msg || '修改失败，请稍后')
@@ -322,6 +328,7 @@
     height: 619px;
     border: 1px solid #aaaaaa;
     overflow-y: auto;
+    margin-left: 0px;
   }
 
   .content_table .content_table_p {

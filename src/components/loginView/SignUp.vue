@@ -3,7 +3,7 @@
     <div class="signUp_bg">
       <el-form class="signUp_form">
         <el-form-item label="公司名称:">
-          <el-input v-model="company.companyName" @blur="checkName()"></el-input>
+          <el-input v-model="company.companyName" @blur="checkName()" :maxlength="50"></el-input>
         </el-form-item>
         <el-form-item label="公司类型:">
           <el-select v-model="company.catId" placeholder="请选择">

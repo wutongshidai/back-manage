@@ -37,8 +37,8 @@ export const editGood = function ({commit}, object) {
  * @param list
  * @returns {Promise.<TResult>}
  */
-export const soldout = function ({commit}, list) {
-  return axios.post(baseURL + '', list).then(res => {
+export const soldOut = function ({commit}, list) {
+  return axios.post(baseURL + 'soldOut.do', list).then(res => {
     commit(SOLD_OUT, res)
   }).catch(error => {
     console.log(error)

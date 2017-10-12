@@ -1,4 +1,5 @@
-const baseURL = 'http://192.168.3.135:8001/api/'
+const baseURL = 'http://www.wutongsd.com/'
+// const baseURL = 'http://localhost:8001/api/'
 
 export default baseURL
 

@@ -1,13 +1,14 @@
 <template>
   <div>
     <p style="font-size: 24px">请填写完整店铺信息</p>
+    (<b style="color:#e64242">如需添加商品,请填写所有信息</b>)
     <div class="content_table" v-if="editFlag">
       <ul>
         <li class="content_table_p">公司及联系人信息</li>
         <li class="ul_li_dub"><span>公司名称:</span><b style="display: inline-block; width: 200px">{{companyName}}</b><span>公司性质:</span><input v-model="company.adCompanyNature" type="text"/></li>
         <li class="ul_li_one"><span>公司网址:</span><input v-model="company.adCompanyUrl" type="text"/></li>
         <li class="ul_li_one"><span>公司所在地:</span><input  v-model="company.adCompanyAddress" type="text"/></li>
-        <li class="ul_li_one"><span>固定电话:</span><input @blur="check_companyPhone" v-model="company.adCompanyPhone" type="text"/></li>
+        <li class="ul_li_one"><span>固定电话:</span><input placeholder="010-00000000" @blur="check_companyPhone" v-model="company.adCompanyPhone" type="text"/></li>
         <li class="ul_li_dub"><span>邮政编码:</span><input @blur="check_companyCode" v-model="company.adCompanyCode" type="text"/><span>电子邮箱:</span><input @blur="check_companyMail" v-model="company.adCompanyMail" type="text"/></li>
         <li class="ul_li_one"><span>联系人姓名:</span><input v-model="company.adCompanyContacts" type="text"/></li>
         <li class="ul_li_one"><span>联系人电话:</span><input  @blur="check_companyContacts" placeholder="建议提供销售联系人的电话" v-model="company.adCompanyContactsnumber" type="text"/></li>
@@ -24,7 +25,7 @@
         <li class="ul_li_ther"><span style="float: left">企业营业执照副本:</span>
           <el-upload
             class="avatar-uploader"
-            action="/api/uploadOss.do"
+            action="http://www.wutongsd.com/uploadOss.do"
             :show-file-list="false"
             :on-success="picSuccess1"
             :before-upload="picUploadbefore">
@@ -36,7 +37,7 @@
         <li class="ul_li_ther two"><span style="float: left">法人身份证:</span>
           <el-upload
             class="avatar-uploader"
-            action="/api/uploadOss.do"
+            action="http://www.wutongsd.com/uploadOss.do"
             :show-file-list="false"
             :on-success="picSuccess2"
             :before-upload="picUploadbefore">
@@ -47,7 +48,7 @@
         <li class="ul_li_ther two twos"><span style="float: left">店铺负责人身份证:</span>
           <el-upload
             class="avatar-uploader"
-            action="/api/uploadOss.do"
+            action="http://www.wutongsd.com/uploadOss.do"
             :show-file-list="false"
             :on-success="picSuccess3"
             :before-upload="picUploadbefore">

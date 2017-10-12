@@ -7,7 +7,7 @@
               <el-menu-item index="1">店铺设置</el-menu-item>
               <el-menu-item index="2">店铺导航</el-menu-item>
               <el-menu-item index="3">店铺信息</el-menu-item>
-              <el-menu-item index="4">店铺关注</el-menu-item>
+              <!--<el-menu-item index="4">店铺关注</el-menu-item>-->
               <!--<el-menu-item index="3">所有商品</el-menu-item>-->
             </el-menu>
           </el-col>
@@ -17,7 +17,7 @@
       <shop-set-up v-if="this.active_choose == 1"></shop-set-up>
       <shop-navigation v-if="this.active_choose == 2"></shop-navigation>
       <shop-info v-if="this.active_choose == 3"></shop-info>
-      <shop-attention v-if="this.active_choose == 4"></shop-attention>
+      <!--<shop-attention v-if="this.active_choose == 4"></shop-attention>-->
       <!--<all-goods v-if="this.active_choose == 3"></all-goods>-->
     </div>
   </div>

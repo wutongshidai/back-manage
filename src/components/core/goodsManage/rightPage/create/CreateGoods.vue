@@ -51,7 +51,7 @@
           <el-upload
             id="description"
             class="description"
-            action="http://localhost:8081/uploadOss.do"
+            action="http://www.wutongsd.com/uploadOss.do"
             :on-remove="descriptionRemove"
             :on-success="descriptionSuccess"
             :before-upload="beforeDescriptionUpload"
@@ -66,7 +66,7 @@
         <el-form-item label="商品展示图片">
           <!--action="https://jsonplaceholder.typicode.com/posts/"-->
           <el-upload
-            action="http://localhost:8081/uploadOss.do"
+            action="http://www.wutongsd.com/uploadOss.do"
             class="pic"
             :on-remove="picRemove"
             :on-success="picSuccess"

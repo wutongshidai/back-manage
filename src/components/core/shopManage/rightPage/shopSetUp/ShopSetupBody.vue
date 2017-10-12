@@ -7,7 +7,7 @@
       <el-form-item label="店铺logo:">
         <el-upload
           class="avatar-uploader"
-          action="http://localhost:8081/uploadOss.do"
+          action="http://www.wutongsd.com/uploadOssCard.do"
           :show-file-list="false"
           :on-success="handleAvatarSuccess"
           :on-error="logoUpErr"

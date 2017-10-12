@@ -142,7 +142,7 @@
         this.bttMsg = '请求中'
         this.putDisable = true
         this.dialog_close = false
-        this.$store.dispatch('editGood', goods).then(
+        this.$store.dispatch('soldOut', goods).then(
           () => {
             this.initList()
             this.dialogputVisible = false
