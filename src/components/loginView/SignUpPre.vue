@@ -25,7 +25,7 @@
         <li class="ul_li_ther"><span style="float: left">企业营业执照副本:</span>
           <el-upload
             class="avatar-uploader"
-            action="http://www.wutongsd.com/uploadOss.do"
+            action="http://www.wutongsd.com/uploadOssCard.do"
             :show-file-list="false"
             :on-success="picSuccess1"
             :before-upload="picUploadbefore">
@@ -37,7 +37,7 @@
         <li class="ul_li_ther two"><span style="float: left">法人身份证:</span>
           <el-upload
             class="avatar-uploader"
-            action="http://www.wutongsd.com/uploadOss.do"
+            action="http://www.wutongsd.com/uploadOssCard.do"
             :show-file-list="false"
             :on-success="picSuccess2"
             :before-upload="picUploadbefore">
@@ -48,7 +48,7 @@
         <li class="ul_li_ther two twos"><span style="float: left">店铺负责人身份证:</span>
           <el-upload
             class="avatar-uploader"
-            action="http://www.wutongsd.com/uploadOss.do"
+            action="http://www.wutongsd.com/uploadOssCard.do"
             :show-file-list="false"
             :on-success="picSuccess3"
             :before-upload="picUploadbefore">
