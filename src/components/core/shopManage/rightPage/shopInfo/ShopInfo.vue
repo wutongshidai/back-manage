@@ -8,7 +8,7 @@
   </div>
 </template>
 <script>
-  import shopInfoBody from './shopInfoBody'
+  import shopInfoBody from './shopinfoBody'
   export default {
     components: {shopInfoBody}
   }

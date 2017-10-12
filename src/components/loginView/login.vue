@@ -58,7 +58,7 @@
     width: 1260px;
     height: 120px;
     margin:0 auto;
-    background: url(../../assets/logoBig1.png) no-repeat;
+    background: url(../../assets/logobig1.png) no-repeat;
   }
   .return_signIn {
     width: 260px;
