@@ -84,10 +84,10 @@
           <img v-if="this.company.adLicenseImg !== ''" :src="'http://wut3.oss-cn-beijing.aliyuncs.com/' + this.company.adLicenseImg" class="avatar">
         </li>
         <li class="ul_li_ther two"><span style="float: left">法人身份证:</span>
-          <img v-if="this.company.adLicenseImg !== ''" :src="'http://wut3.oss-cn-beijing.aliyuncs.com/' + company.adLegalImg" class="avatar">
+          <img v-if="this.company.adLegalImg !== ''" :src="'http://wut3.oss-cn-beijing.aliyuncs.com/' + company.adLegalImg" class="avatar">
         </li>
         <li class="ul_li_ther two twos"><span style="float: left">店铺负责人身份证:</span>
-          <img v-if="this.company.adLicenseImg !== ''" :src="'http://wut3.oss-cn-beijing.aliyuncs.com/' + company.adManageImg" class="avatar">
+          <img v-if="this.company.adManageImg !== ''" :src="'http://wut3.oss-cn-beijing.aliyuncs.com/' + company.adManageImg" class="avatar">
         </li>
         <li class="ul_li_f">
           <button v-on:click="editInfo">修改信息</button>

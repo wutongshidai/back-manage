@@ -91,7 +91,7 @@
       let adminState = this.$store.state.login.adminState
       this.adShopName = adminState.adShopName
       if (adminState.adShopLogo !== null) {
-        this.imageUrl = 'http://wut1.oss-cn-beijing.aliyuncs.com/' + adminState.adShopLogo
+        this.imageUrl = 'http://wut3.oss-cn-beijing.aliyuncs.com/' + adminState.adShopLogo
       }
     }
   }
