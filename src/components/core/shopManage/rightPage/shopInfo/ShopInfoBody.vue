@@ -81,13 +81,13 @@
         <li class="ul_li_dub"><span>负责人QQ号码:</span><span class="content_table_span">{{company.adShopQq}}</span></li>
         <li class="content_table_p">证件信息</li>
         <li class="ul_li_ther"><span style="float: left">企业营业执照副本:</span>
-          <img v-if="this.company.adLicenseImg !== ''" :src="'http://wut1.oss-cn-beijing.aliyuncs.com/' + this.company.adLicenseImg" class="avatar">
+          <img v-if="this.company.adLicenseImg !== ''" :src="'http://wut3.oss-cn-beijing.aliyuncs.com/' + this.company.adLicenseImg" class="avatar">
         </li>
         <li class="ul_li_ther two"><span style="float: left">法人身份证:</span>
-          <img v-if="this.company.adLicenseImg !== ''" :src="'http://wut1.oss-cn-beijing.aliyuncs.com/' + company.adLegalImg" class="avatar">
+          <img v-if="this.company.adLicenseImg !== ''" :src="'http://wut3.oss-cn-beijing.aliyuncs.com/' + company.adLegalImg" class="avatar">
         </li>
         <li class="ul_li_ther two twos"><span style="float: left">店铺负责人身份证:</span>
-          <img v-if="this.company.adLicenseImg !== ''" :src="'http://wut1.oss-cn-beijing.aliyuncs.com/' + company.adManageImg" class="avatar">
+          <img v-if="this.company.adLicenseImg !== ''" :src="'http://wut3.oss-cn-beijing.aliyuncs.com/' + company.adManageImg" class="avatar">
         </li>
         <li class="ul_li_f">
           <button v-on:click="editInfo">修改信息</button>
