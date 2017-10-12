@@ -27,7 +27,7 @@
             :show-file-list="false"
             :on-success="picSuccess1"
             :before-upload="picUploadbefore">
-            <img v-if="this.company.adLicenseImg !== ''" :src="'http://wut1.oss-cn-beijing.aliyuncs.com/' + this.company.adLicenseImg" class="avatar">
+            <img v-if="this.company.adLicenseImg !== ''" :src="'http://wut3.oss-cn-beijing.aliyuncs.com/' + this.company.adLicenseImg" class="avatar">
             <i v-else class="el-icon-plus avatar-uploader-icon"></i>
           </el-upload>
 
@@ -39,7 +39,7 @@
             :show-file-list="false"
             :on-success="picSuccess2"
             :before-upload="picUploadbefore">
-            <img v-if="this.company.adLegalImg !== ''" :src="'http://wut1.oss-cn-beijing.aliyuncs.com/' + this.company.adLegalImg"  class="avatar">
+            <img v-if="this.company.adLegalImg !== ''" :src="'http://wut3.oss-cn-beijing.aliyuncs.com/' + this.company.adLegalImg"  class="avatar">
             <i v-else class="el-icon-plus avatar-uploader-icon"></i>
           </el-upload>
         </li>
@@ -50,7 +50,7 @@
             :show-file-list="false"
             :on-success="picSuccess3"
             :before-upload="picUploadbefore">
-            <img v-if="this.company.adManageImg !== ''" :src="'http://wut1.oss-cn-beijing.aliyuncs.com/' + this.company.adManageImg" class="avatar">
+            <img v-if="this.company.adManageImg !== ''" :src="'http://wut3.oss-cn-beijing.aliyuncs.com/' + this.company.adManageImg" class="avatar">
             <i v-else class="el-icon-plus avatar-uploader-icon"></i>
           </el-upload>
           <!--<button type="">上传</button>-->
