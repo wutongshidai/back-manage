@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import home from '@/components/core/home'
+import home from '@/components/core/Home'
 import goodsManage from '@/components/core/goodsManage/GoodsManages'
-import shopManage from '@/components/core/shopManage/shopManage'
+import shopManage from '@/components/core/shopManage/ShopManage'
 import login from '@/components/loginView/login'
 
 Vue.use(Router)
