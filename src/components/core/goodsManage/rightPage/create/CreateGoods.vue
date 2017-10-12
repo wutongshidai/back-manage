@@ -32,7 +32,7 @@
           <el-input class="creat_form_input" v-model="goods.gdOrder" placeholder="例：30x30cm ; 6kg ; 袋; 桶;"></el-input>
         </el-form-item>
         <el-form-item label="库存数量">
-          <InputNumber class="creat_form_input" :min="0" :step="1" v-model="goods.gdNumber" @on-change="handleNum(goods.gdNumber)" style="width: 204px"></InputNumber>
+          <InputNumber class="creat_form_input" :min="0" :max="999999" :step="1" v-model="goods.gdNumber" @on-change="handleNum(goods.gdNumber)" style="width: 204px"></InputNumber>
         </el-form-item>
         <el-form-item label="颜色分类">
           <el-input class="creat_form_input" v-model="goods.gdColour" placeholder="如果需要区分颜色，请填写"></el-input>
