@@ -238,7 +238,7 @@
                   message: upShopState.msg,
                   type: 'success'
                 })
-                this.$router.push('/')
+                this.$emit('signUp', 0)
               } else {
                 this.$message.error(upShopState.msg || '注册失败，请稍后')
               }
